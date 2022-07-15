@@ -73,7 +73,7 @@
 }
 
 .ex-6-img:hover {
-    filter: grayscale(1);
+    filter: grayscale(3);
 }
 
 .ex-7-img {
@@ -81,10 +81,13 @@
 }
 
 .ex-7-img:hover {
-    filter: hue-rotate(2);
-    filter: invert(3);
+    filter: sepia(1) grayscale(1)
 }
 
+.ex-8-img:hover {
+    filter: sepia(4) blur(1px);
+    border-radius: 20px;
+}
 
 
 .ex-9-img {
