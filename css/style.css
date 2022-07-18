@@ -42,7 +42,8 @@
 }
 
 .ex-4-square:hover {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5;  --- si può usare ma per rendere un oggetto invisibile è meglio usare opacity*/
+    opacity: 0;
 }
 
 
@@ -56,13 +57,15 @@
 }
 
 .ex-5-square:hover {
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; --- visivamente funziona ma andando ad operare con altezza e larghezza l'elemento potrebbe cambiare dimensione quindi potrebbe ad esempio andare a capo*/
+    transform: scale(1.5);
 }
 
 .ex-5-square:active {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
+    transform: scale(.5);
 }
 
 
@@ -93,16 +96,29 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 1s;
 }
 
 .ex-9-img:hover {
-    filter: brightness(70%) grayscale(1);
+    filter: brightness(30%) grayscale(1);
     border-radius: 10px;
     transform: scale(0.5);
 }
 
+
 .ex-10-icon {
     font-size: 60px;
+    animation: icon-10-rotation 2s linear infinite;
+}
+
+@keyframes icon-10-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
